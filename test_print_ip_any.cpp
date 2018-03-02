@@ -1,7 +1,7 @@
 #define BOOST_TEST_MAIN
 #define BOOST_TEST_MODULE test_print_ip_any
 
-#include "print_ip_lib.h"
+#include "print_ip.h"
 
 #include <boost/test/unit_test.hpp>
 
