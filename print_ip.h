@@ -34,8 +34,8 @@ void print_ip(const std::enable_if<std::is_compound<T>::value, T> & ip)
               << std::endl;
 }
 
-template <>
-void print_ip<std::string>(const std::string & ip)
-{
-    std::cout << ip << std::endl;
-}
+//template <>
+//void print_ip<std::string>(const std::string & ip)
+//{
+//    std::cout << ip << std::endl;
+//}
