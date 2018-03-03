@@ -11,8 +11,8 @@ int main(int argc, const char * argv[])
     print_ip<int>(2130706433);
     print_ip<long>(8875824491850138409);
     
-//    std::string str("192.168.0.1");
-//    print_ip<std::string>(str);
+    std::string str("192.168.0.1");
+    print_ip<std::string>(str);
     
     std::vector<int> v(4, 255);
     print_ip<std::vector<int> >(v);

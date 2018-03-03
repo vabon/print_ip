@@ -7,7 +7,7 @@
 #include <type_traits>
 
 template <typename T>
-void print_ip(const std::enable_if<std::is_integral<T>::value, T> & ip)
+void print_ip(const std::enable_if_t<std::is_integral<T>::value, T> & ip)
 {
     auto bytes = sizeof(ip);
     unsigned char chunk;
@@ -25,7 +25,7 @@ void print_ip(const std::enable_if<std::is_integral<T>::value, T> & ip)
 }
 
 template<typename T>
-void print_ip(const std::enable_if<std::is_compound<T>::value, T> & ip)
+void print_ip(const std::enable_if_t<std::is_compound<T>::value, T> & ip)
 {
     std::cout << std::accumulate(std::next(ip.begin()), ip.end(),
                                     std::to_string(ip.front()),
@@ -34,8 +34,8 @@ void print_ip(const std::enable_if<std::is_compound<T>::value, T> & ip)
               << std::endl;
 }
 
-//template <>
-//void print_ip<std::string>(const std::string & ip)
-//{
-//    std::cout << ip << std::endl;
-//}
+template <>
+void print_ip<std::string>(const std::string & ip)
+{
+    std::cout << ip << std::endl;
+}
