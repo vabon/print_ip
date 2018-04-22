@@ -6,6 +6,8 @@ before_script:
 
 - sudo apt-get install libboost-test-dev -y
 
+- sudo apt-get install doxygen -y
+
 script:
 
 - cmake .
