@@ -36,6 +36,8 @@ deploy:
   
     branch: master
 
+deploy:
+
   provider: script
 
   skip_cleanup: true
