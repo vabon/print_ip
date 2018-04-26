@@ -10,6 +10,12 @@ before_script:
 
 - doxygen Doxyfile
 
+- ls
+
+- cd html
+
+- ls
+
 script:
 
 - cmake .
@@ -31,6 +37,10 @@ deploy:
   keep-history: true
   
   local-dir: html
+  
+  target-branch: gh-pages
+  
+  verbose: true
   
   on:
   
