@@ -10,12 +10,6 @@ before_script:
 
 - doxygen Doxyfile
 
-- ls
-
-- cd html
-
-- ls
-
 script:
 
 - cmake .
